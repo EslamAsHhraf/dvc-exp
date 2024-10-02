@@ -9,8 +9,8 @@ stages:
       size: 684859
     - path: index.py
       hash: md5
-      md5: cf673733c56ce9f953995a96a175a646
-      size: 2883
+      md5: a5ab71d32463635ca54065ac290aa761
+      size: 2886
     params:
       params.yaml:
         base:
@@ -43,7 +43,7 @@ stages:
       size: 19238
     - path: reports/metrics.json
       hash: md5
-      md5: 011475e353396cf80ef8e34997bcc5b2
+      md5: e9ef02d73b2d1019e2793c6aedf5214a
       size: 16
     - path: reports/plot.png
       hash: md5

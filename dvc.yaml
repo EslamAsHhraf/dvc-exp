@@ -1,0 +1,25 @@
+# dvc.yaml
+stages:
+  split_data:
+    cmd: python3 index.py
+    deps: 
+      - index.py
+      - data/raw/Churn_Modelling.xls
+    params:
+      - base
+      - data
+      - data_split
+    outs:
+      - data/processed/x_train.csv
+      - data/processed/x_test.csv
+      - data/processed/y_train.csv
+      - data/processed/y_test.csv
+    metrics:
+    - reports/metrics.json:
+        cache: false  # Do not cache this file
+    plots:
+    - reports/confusion_matrix.png:
+        cache: false  # Do not cache this plot
+    - reports/plot.png:  # Track the new plot generated
+        cache: false  # Prevent caching for this plot
+

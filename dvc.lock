@@ -1,0 +1,51 @@
+schema: '2.0'
+stages:
+  split_data:
+    cmd: python3 index.py
+    deps:
+    - path: data/raw/Churn_Modelling.xls
+      hash: md5
+      md5: b059ca27606289443ee7c340788fa0e7
+      size: 684859
+    - path: index.py
+      hash: md5
+      md5: af3f4b94be200bf6858037cddbf9d4bf
+      size: 2881
+    params:
+      params.yaml:
+        base:
+          random_seed: 42
+        data:
+          raw_data_path: data/raw/Churn_Modelling.xls
+          processed_data_path: data/processed
+        data_split:
+          test_size: 0.2
+    outs:
+    - path: data/processed/x_test.csv
+      hash: md5
+      md5: 06f5b19b05d4e164fc932cfaaedb8ea5
+      size: 132618
+    - path: data/processed/x_train.csv
+      hash: md5
+      md5: 71cc098c99cd6bd9d4f705a417393f58
+      size: 529982
+    - path: data/processed/y_test.csv
+      hash: md5
+      md5: 2348430554f9ec27c1b8f2ccb9ea5bcc
+      size: 4008
+    - path: data/processed/y_train.csv
+      hash: md5
+      md5: a013845b803397a005d48df565ec585d
+      size: 16007
+    - path: reports/confusion_matrix.png
+      hash: md5
+      md5: 159243ea5a32c45008959edc1ac9c01b
+      size: 19238
+    - path: reports/metrics.json
+      hash: md5
+      md5: 4cfc4b0993e10b56f9fce93bd8af8b09
+      size: 16
+    - path: reports/plot.png
+      hash: md5
+      md5: c1f6f578bd1ccc6d105c58cbd26b1e62
+      size: 75149

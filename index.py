@@ -35,7 +35,7 @@ print("Data split completed successfully.")
 
 # Save the accuracy to a JSON file
 metrics = {
-    "accuracy": 80
+    "accuracy": 70
 }
 
 with open('reports/metrics.json', 'w') as f:

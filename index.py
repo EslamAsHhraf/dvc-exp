@@ -84,6 +84,8 @@ plt.ylabel('Y values')
 plt.xticks(np.arange(0, 11, 1))  # Set x ticks from 0 to 10
 plt.yticks(np.arange(-1.5, 2, 0.5))  # Set y ticks
 
+
+
 # Annotating each point with its y value
 for i in range(len(data)):
     plt.annotate(f'{data["y"].iloc[i]:.2f}', (data['x'].iloc[i], data['y'].iloc[i]), 
